@@ -1,0 +1,15 @@
+Using Firefox: I am authenticated with valid credentials with ZAP proxy I capture the 302 response code and a valid cookie.
+
+Using Chrome: I am providing wrong credentials and replace the response with the captured 302 response containing the valid captured cookie. I'm now able to login to the application.
+
+Is this finding a False Positive case or not?
+
+If not then what will be the mitigation to resolve this issue.
+
+Mitigation Suggested:
+
+Multiple user logins in multiple browsers and multiple machines should be validated. If matched, invalidate the existing cookie and make the user authenticate again.
+
+I am a penetration tester and doesn't have the application code.
+
+User should not be authenticated to the application without providing valid credentials.
